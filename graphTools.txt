@@ -1,0 +1,8 @@
+openGL: the main thing for graphing stuff
+
+GLAD, GLEW: Use new openGL feature not included in GL, make base GL easier
+    GPT suggests GLAD > GLEW but you can switch easily later
+
+GLFW, GLUT: For creating windows, input, events, "contexts"
+    GLUT is old and not recommended
+

@@ -1,0 +1,31 @@
+#include <GL/gl.h>
+#include <GL/glut.h>
+#include <stdio.h>
+#include <glad/glad.h>
+
+
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glColor3f(1.0f, 0.0f, 0.0f); // Set ball color to red
+
+    // Draw the ball
+    glPushMatrix();
+    glutSolidSphere(0.5, 20, 20); // Radius = 0.5, slices = 20, stacks = 20
+    glPopMatrix();
+
+    glutSwapBuffers();
+}
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
+    glutInitWindowSize(500, 500);
+    glutCreateWindow("OpenGL Ball");
+
+    glEnable(GL_DEPTH_TEST);
+
+    glutDisplayFunc(display);
+    glutMainLoop();
+
+    return 0;
+}

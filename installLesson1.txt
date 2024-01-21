@@ -1,0 +1,16 @@
+Followed tutorial: but got undefined reference on all glfw things in main.cpp
+https://www.youtube.com/watch?v=Y4F0tI7WlDs
+
+    Fix: uninstall MinGW 32 and get MinGW 64
+        I had MinGW 32 but had 64 bit GLFW
+
+
+Red squiggly is problem detected by VsCode intelliSense
+    vscode 
+
+dll, dynamic link library: special way to link library
+    need to include dll if want to share VsCode
+
+    if you do static way without dll, exe will be bigger but no need share library
+
+    need libglfw3dll.a and then glfw3.dll - should be in diff folder
